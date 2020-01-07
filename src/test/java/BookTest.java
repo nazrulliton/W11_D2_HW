@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 
 public class BookTest {
     private Book book;
+    private Book book1;
+    private Book book2;
 
     @Before
     public void before(){
