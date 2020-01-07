@@ -7,12 +7,15 @@ public class LibraryTest {
     private Library library;
     private Book book;
     private Book book1;
+    private Book book2;
 
     @Before
     public void before(){
         library = new Library(3);
         book = new Book("Harry P", "JK", "Fantasy");
         book1 = new Book("Jack Ryan", "Lee Child", "Factual");
+        book2 = new Book("Jack Ryan2", "Lee Child", "Factual");
+
     }
     @Test
     public void canAddBooks(){
@@ -20,4 +23,5 @@ public class LibraryTest {
         library.addBook(book1);
         assertEquals(2, library.bookCount());
     }
+
 }

@@ -4,15 +4,21 @@ public class Library {
     private ArrayList<Book> books;
     private int capacity;
 
-    public Library(int capacity){
+    public Library(int capacity) {
         this.books = new ArrayList<Book>();
         this.capacity = capacity;
     }
-    public int bookCount(){
+
+    public int bookCount() {
         return this.books.size();
     }
 
     public void addBook(Book book) {
-        this.books.add(book);
+        if (isSpaceAvailable()) {
+            this.books.add(book);
+        }
+    }
+    public boolean isSpaceAvailable(){
+        return books.size() < capacity;
     }
 }
